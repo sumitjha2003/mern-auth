@@ -59,8 +59,7 @@ function SignIn() {
         <p>Dont Have an account?</p>
         <Link to='/sign-up'>
             <span className='text-blue-500'>Sign up</span>
-        </Link>
-        
+        </Link>  
       </div>
       <p className='text-red-700 mt-5'>{error.message ? error || 'Something went Wrong!':''}</p>
     </div>
