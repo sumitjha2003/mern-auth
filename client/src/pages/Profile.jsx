@@ -39,7 +39,7 @@ function Profile() {
       <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
       <form className="flex flex-col gap-4">
       <input type="file" ref={fileRef} hidden accept="image/*" onChange={(e)=>setImage(e.target.files[0])} />
-        <img src={currentUser.profilePicture} alt="profile" className="h-24 w-24 self-center cursor-pointer rounded-full object-cover" onClick={()=>fileRef.current.click()}/>
+        <img src={formData.profilePicture||currentUser.profilePicture} alt="profile" className="h-24 w-24 self-center cursor-pointer rounded-full object-cover" onClick={()=>fileRef.current.click()}/>
         <p className='text-sm self-center'>
           {imageError ? (
             <span className='text-red-700'>
