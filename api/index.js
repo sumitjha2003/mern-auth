@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
 import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 
 mongoose.connect(process.env.MONGO).then(()=>{
@@ -16,6 +17,7 @@ mongoose.connect(process.env.MONGO).then(()=>{
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(
   bodyParser.urlencoded({
     extended: true,
